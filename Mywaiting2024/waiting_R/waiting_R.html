@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식당 대기 시스템</title>
+    <link rel="stylesheet" href="styles_W_R.css">
+</head>
+<body>
+    <div class="header">
+        <div class="restaurant-name">식당 이름</div>
+        <div class="user-info">
+            <span class="profile-pic"></span>
+            <span>식당 관리자</span>
+            <button class="settings" onclick="location.href='restaurant_settings.html'">설정</button>
+            <button class="logout" onclick="showLogoutPopup()">로그아웃</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="summary">
+            <div class="total-teams">전체 대기 팀<br><span id="team-count">3팀</span></div>
+            <div class="waiting-time">대기시간<br><span id="waiting-time">50분</span></div>
+        </div>
+        <div class="queue-list" id="queue-list">
+            <div class="queue-item" data-id="001">
+                <div class="queue-number">대기 번호 : 001번</div>
+                <div class="visit-info">방문 인원수 : 2명<br>010-xxxx-xxxx</div>
+                <div class="actions">
+                    <button class="call" onclick="showCallPopup('001')">호출</button>
+                    <button class="enter" onclick="enterQueue('001')">입장</button>
+                    <button class="cancel" onclick="removeQueue('001')">없음</button>
+                </div>
+            </div>
+            <div class="queue-item" data-id="002">
+                <div class="queue-number">대기 번호 : 002번</div>
+                <div class="visit-info">방문 인원수 : 2명<br>010-xxxx-xxxx</div>
+                <div class="actions">
+                    <button class="call" onclick="showCallPopup('002')">호출</button>
+                    <button class="enter" onclick="enterQueue('002')">입장</button>
+                    <button class="cancel" onclick="removeQueue('002')">없음</button>
+                </div>
+            </div>
+            <div class="queue-item" data-id="003">
+                <div class="queue-number">대기 번호 : 003번</div>
+                <div class="visit-info">방문 인원수 : 2명<br>010-xxxx-xxxx</div>
+                <div class="actions">
+                    <button class="call" onclick="showCallPopup('003')">호출</button>
+                    <button class="enter" onclick="enterQueue('003')">입장</button>
+                    <button class="cancel" onclick="removeQueue('003')">없음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Custom Popups -->
+    <div id="logoutPopup" class="popup">
+        <div class="popup-content">
+            <p>로그아웃 하시겠습니까?</p>
+            <button onclick="confirmLogout()">예</button>
+            <button onclick="closeLogoutPopup()">아니오</button>
+        </div>
+    </div>
+    
+    <div id="callPopup" class="popup">
+        <div class="popup-content">
+            <p>호출하시겠습니까?</p>
+            <button id="confirmCallButton">예</button>
+            <button onclick="closeCallPopup()">아니오</button>
+        </div>
+    </div>
+    
+    <script src="script_W_R.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.header {
+    background-color: #ffcc00;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 64px);
+}
+
+.content-box {
+    background-color: #ffcc00;
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.main-content h1,
+.registration-form h1,
+.completion-content h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.main-content p,
+.completion-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.waiting-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.waiting-info div {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #333;
+}

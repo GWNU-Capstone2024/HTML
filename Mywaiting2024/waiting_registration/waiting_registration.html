@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웨이팅 등록</title>
+    <link rel="stylesheet" href="styles_registration.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">웨이팅 등록</div>
+    </div>
+    <div class="container">
+        <div class="content-box">
+            <div class="registration-form">
+                <h1>웨이팅 등록</h1>
+                <form action="waiting_complete.html" method="POST">
+                    <div class="form-group">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">전화번호</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="partySize">방문 인원 수</label>
+                        <input type="number" id="partySize" name="partySize" required>
+                    </div>
+                    <button type="submit">등록하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
