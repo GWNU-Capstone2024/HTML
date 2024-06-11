@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웨이팅 완료</title>
+    <link rel="stylesheet" href="styles_waiting_main.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const phoneNumber = urlParams.get('phoneNumber');
+            const partySize = urlParams.get('partySize');
+            const queueNumber = Math.floor(Math.random() * 1000); // 임시로 랜덤 대기번호 생성
+
+            /* DOMContentLoaded 이벤트를 수신하고, 이벤트가 발생하면 아래의 코드 블록을 실행.
+            URL에서 쿼리 매개변수를 추출하여 name, phoneNumber, partySize 변수에 저장.
+            임시로 랜덤한 대기번호를 생성하여 queueNumber 변수에 저장.
+            각각의 변수 값을 HTML 요소에 삽입하여 사용자에게 정보를 표시.*/
+
+            document.getElementById('customerName').innerText = name;
+            document.getElementById('queueNumber').innerText = '대기 번호: ' + queueNumber;
+            document.getElementById('phoneNumber').innerText = '전화번호: ' + phoneNumber;
+            document.getElementById('partySize').innerText = '방문 인원 수: ' + partySize;
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">웨이팅 완료</div>
+    </div>
+    <div class="container">
+        <div class="content-box">
+            <div class="completion-content">
+                <h1>웨이팅 등록이 완료되었습니다!</h1>
+                <p id="customerName"></p>
+                <p id="queueNumber"></p>
+                <p id="phoneNumber"></p>
+                <p id="partySize"></p>
+                <button onclick="location.href='waiting_main.html'">메인 화면으로 돌아가기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

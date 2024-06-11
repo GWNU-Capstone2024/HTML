@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이 웨이팅 : 웨이팅 등록 시스템</title>
+    <link rel="stylesheet" href="styles_waiting_main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">마이 웨이팅 : 식당 웨이팅 시스템</div>
+    </div>
+    <div class="container">
+        <div class="content-box">
+            <div class="main-content">
+                <!--실시간 대기 정보 확인-->
+                <h1>현재 대기 정보</h1>
+                <div class="waiting-info">
+                    <div>
+                        <strong>대기 팀 수:</strong>
+                        <span id="teamCount">3팀</span>
+                    </div>
+                    <div>
+                        <strong>대기 시간:</strong>
+                        <span id="waitingTime">50분</span>
+                    </div>
+                </div>
+                <button onclick="location.href='waiting_registration.html'">웨이팅 등록하기</button>
+            </div>
+        </div>
+    </div>
+    <script src="script_waiting_main.js"></script>
+</body>
+</html>

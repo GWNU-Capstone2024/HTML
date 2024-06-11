@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+/*전체 사이트 글꼴 적용 코드*/
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.header {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.header .restaurant-name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header .profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header .settings,
+.header .logout {
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid black;
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.summary {
+    width: 20%;
+    padding-right: 20px;
+}
+
+.summary .total-teams,
+.summary .waiting-time {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid black;
+    font-size: 24px;
+}
+
+.summary .total-teams span,
+.summary .waiting-time span {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+}
+
+.queue-list {
+    width: 80%;
+}
+
+.queue-item {
+    background-color: #ffcc00;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+.queue-number,
+.visit-info {
+    font-size: 24px;
+}
+
+.actions {
+    display: flex;
+}
+
+.actions button {
+    background-color: black;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.actions .cancel {
+    background-color: red;
+}
+
+/* Custom Popup 스타일 */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ffe100;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
